@@ -84,3 +84,19 @@ M1[,c("E", "C")]
 colnames(M1)[3] = "ZZZ"
 M1
 
+#陣列(Array)層物件基本介紹(6)
+#接著我們介紹資料表(data.frame)物件，與矩陣物件不同的是，資料表允許每欄有不同的屬性，因此從矩陣轉資料表是不會改變太多結構的，但從資料表轉為矩陣就可能出現問題
+x1 = 1:20
+M1 = matrix(x1, nrow = 4, ncol = 5)
+D1 = data.frame(M1)
+D1
+
+rownames(M1) = c("a", "b", "c", "d")
+colnames(M1) = c("A", "B", "C", "D", "E")
+
+D2 = data.frame(M1)
+D2
+
+colnames(D1) = c("A", "B", "C", "D", "E")
+D1
+
