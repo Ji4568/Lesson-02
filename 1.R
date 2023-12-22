@@ -100,3 +100,23 @@ D2
 colnames(D1) = c("A", "B", "C", "D", "E")
 D1
 
+#陣列(Array)層物件基本介紹(7)
+#資料表(data.frame)物件也能透過合併多個長度相同的向量(可以允許不同種類)來產生，並且在合併後不改變本來的屬性：
+a = c(TRUE, FALSE, TRUE, FALSE, FALSE)
+class(a)
+
+b = c(0.7, -0.9, 1.2, -2.1, 3.7)
+class(b)
+
+c = c("A", "B", "C", "C", "B")
+c = as.factor(c)
+class(c)
+
+DATA = data.frame(a, b, c)
+DATA
+
+class(DATA[,1])
+
+class(DATA[,2])
+
+class(DATA[,3])
