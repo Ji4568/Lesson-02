@@ -120,3 +120,37 @@ class(DATA[,1])
 class(DATA[,2])
 
 class(DATA[,3])
+
+#陣列(Array)層物件基本介紹(8)
+#資料表(data.frame)除了能用矩陣的索引函數之外，從這個層級開始又多了一個索引函數「$」，它的使用方法如下：
+DATA$b
+
+DATA[,2]
+
+DATA[,"b"]
+
+#透過新的索引函數「$」，我們將可以為資料表新增變數，注意新增變數功能沒有辦法透過舊的索引函數做到：
+a = c(TRUE, FALSE, TRUE, FALSE, FALSE)
+b = c(0.7, -0.9, 1.2, -2.1, 3.7)
+c = c("A", "B", "C", "C", "B")
+DATA = data.frame(a, b, c)
+DATA
+
+DATA$d = c(1, 5, 8, 9, 12)
+DATA
+
+#除此之外，擴充陣列層的物件還可以透過函數「rbind()」及「cbind()」完成：
+x = 1:4
+X = matrix(x, nrow = 2, ncol = 2)
+y = 2:5
+Y = matrix(y, nrow = 2, ncol = 2)
+
+rbind(X, Y)
+
+rbind(Y, X)
+
+cbind(X, Y)
+
+#還記得如何擴充向量嗎？
+x = 1:4
+y = 6:8
